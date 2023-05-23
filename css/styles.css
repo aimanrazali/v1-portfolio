@@ -4,7 +4,7 @@ body {
     font-family: 'Merriweather', serif;
     text-align: center;
     color: #40514E;
-    position: relative;
+    /* position: relative; */
 }
 
 h1 {
@@ -56,6 +56,7 @@ hr {
 
 /* ===== navbar ===== */
 .navbar {
+    /* width: 100%; */
     background: #393E46;
 }
 
@@ -69,6 +70,15 @@ hr {
     margin: 0 20px;
     text-decoration: none;
 }
+
+@media only screen and (max-width: 900px) {
+
+    .navbar-brand {
+        width: 0;
+    }
+}
+
+@media only screen and (max-width: 600px) {}
 
 /* ===== table ===== */
 .center {
@@ -112,7 +122,8 @@ hr {
     /* W3C */
     filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#cc000000', endColorstr='#66000000', GradientType=0);
     /* IE6-9 */
-    height: 750px;
+    /* height: 750px; */
+    height: 95vh;
     background-attachment: fixed;
 }
 
@@ -166,6 +177,40 @@ li {
     /* color: #40514E; */
     color: #11999E;
     text-decoration: none;
+}
+
+@media only screen and (max-width: 900px) {
+    #about {
+        text-align: center;
+        width: 70%;
+    }
+
+    #about img {
+        width: 90%;
+    }
+
+    #about h1 {
+        font-size: 4rem;
+    }
+
+    #intro .container-fluid {
+        position: absolute;
+        padding: 45% 0 5% 0;
+        left: 0;
+        right: 0;
+        z-index: 0;
+    }
+
+    .skills-section .skill-icon img {
+        margin: 0 auto;
+        width: 20px;
+        height: auto;
+    }
+
+    #experience {
+        font-size: 80%;
+    }
+
 }
 
 /* ===== SECTION: EXPERIENCE ===== */
@@ -282,6 +327,16 @@ li {
 }
 
 /* ===== SECTION: WORKS ===== */
+
+#works {
+    background: #F7F7F7;
+}
+
+#works img {
+    width: 100%;
+    height: 100%;
+}
+
 #works h3 {
     font-weight: 400;
     font-size: 18px;
@@ -289,39 +344,123 @@ li {
     line-height: 1.5;
 }
 
+
 .works-section h4 {
     text-align: left;
     padding: 1rem;
     font-weight: bold;
 }
 
+
+/* === FYP === */
+
 .fyp-slide {
-    border: 1px solid black;
-    background: #6D9886;
+    /* border: 1px solid black; */
+    /* background: #6D9886; */
+    background: #fff;
     color: #000;
 }
 
-.fyp-slide p {
-    padding: 1rem;
-    text-align: left;
+.fyp-slide h1 {
+    font-size: 3rem;
+    font-family: 'Montserrat', serif;
+    font-weight: normal;
+    padding: 10px 0px 0px;
+    /* text-align: left; */
+    text-decoration: underline;
 }
+
+.fyp-slide p {
+    /* border: solid 1px; */
+    padding: 1rem 4rem;
+    margin: 0 10%;
+    text-align: center;
+    /* width: 60%; */
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+    filter: invert(100%);
+}
+
+.carousel-indicators {
+    background: #393E46;
+    border-radius: 20px;
+}
+
+
+@media only screen and (max-width: 900px) {
+    .fyp-slide h1 {
+        font-size: 1.5rem;
+    }
+
+    .fyp-slide h2 {
+        font-size: 1.25rem;
+    }
+
+    .fyp-slide p {
+        font-size: 0.75rem;
+        margin: 0;
+        padding: 0.25rem 2rem;
+    }
+
+    #works img {
+        width: 90%;
+        padding-bottom: 10%;
+        height: auto;
+    }
+
+}
+
+/* === smol projects === */
+
+.smol-project {
+    /* border: 1px solid black; */
+    /* background: #6D9886; */
+    background: #fff;
+    color: #000;
+}
+
+.smol-project  h1 {
+    font-size: 3rem;
+    font-family: 'Montserrat', serif;
+    font-weight: normal;
+    padding: 10px 0px 0px;
+    /* text-align: left; */
+    text-decoration: underline;
+}
+
+.smol-project p {
+    padding: 0 4rem 1rem;
+    margin: 0 10%;
+    text-align: center;
+}
+
+.smol-project img {
+    padding: 5% 0 2%;
+    text-align: center;
+}
+
 
 
 /* ===== SECTION: PROJECT ===== */
 /* #project {
     background: #6D9886;
-}
+    border: 1px solid;
+} */
 
 #project img {
-    width: 40%;
-} */
+    width: 70%;
+    padding-bottom: 2%;
+}
 
 /* ===== SECTION: CONTACT ===== */
 #contact {
-    /* margin: 40px auto 60px;
-    width: 40%; */
-    /* background: #F7F7F7; */
+    /* margin: 40px auto 60px; */
+    /* width: 40%; */
+    background: #F7F7F7;
 }
+
 
 .contact-message {
     margin: 40px auto 60px;
